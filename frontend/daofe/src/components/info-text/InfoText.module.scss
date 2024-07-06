@@ -1,0 +1,6 @@
+ @use '@/assets/styles/variables' as *;
+
+.text {
+  font-size: $fontSizeMedium;
+  color: $textColorSecondary;
+}
