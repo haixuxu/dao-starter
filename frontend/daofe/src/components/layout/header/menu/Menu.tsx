@@ -7,22 +7,12 @@ function Menu() {
     <ul className={styles.menu}>
       <li>
         <NavLink to="/" className={calcClass}>
-          NFT
+          DAO
         </NavLink>
       </li>
       <li>
         <NavLink to="/card_list" className={calcClass}>
-          Model
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/mint_ticket" className={calcClass}>
-          Ticket
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/playpage" className={calcClass}>
-          Game
+          templates
         </NavLink>
       </li>
     </ul>

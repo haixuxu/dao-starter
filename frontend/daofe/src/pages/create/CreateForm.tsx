@@ -19,11 +19,11 @@ const defaultValues = { name: '', description: '', attributes: defaultAttributes
 
 const IMAGE_FILE_TYPES = ['image/png', 'image/gif', 'image/jpeg'];
 
-// const validateImage = {
-//   required: (files: FileList) => !!files.length || 'Attach image',
-//   size: (files: FileList) => files[0].size / 1024 ** 2 < 10 || 'Image size should not exceed 10MB',
-//   extension: (files: FileList) => IMAGE_FILE_TYPES.includes(files[0].type) || 'Image should be .jpg, .png or .gif',
-// };
+const validateImage = {
+  required: (files: FileList) => !!files.length || 'Attach image',
+  size: (files: FileList) => files[0].size / 1024 ** 2 < 10 || 'Image size should not exceed 10MB',
+  extension: (files: FileList) => IMAGE_FILE_TYPES.includes(files[0].type) || 'Image should be .jpg, .png or .gif',
+};
 
 function CreateForm() {
   const { formState, control, register, handleSubmit, resetField, reset } = useForm<Values>({ defaultValues });
@@ -108,9 +108,8 @@ function CreateForm() {
 
   return (
     <>
-      <h2 className={styles.heading}>Create NFT</h2>
+      <h2 className={styles.heading}>Create DAO</h2>
       <div className={styles.tips}>
-      <h3>tips: 铸造一个NFT需要一个{ticketInfo.name}代币</h3>
       </div>
       <div className={`${styles.main} formmain`}>
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
@@ -146,8 +145,8 @@ function CreateForm() {
           )} */}
 
           <div className={styles.item}>
-            {/* <FileInput label="Image" className={styles.input} accept={IMAGE_FILE_TYPES.join(', ')} {...register('image', { validate: validateImage })} />
-            <p className={styles.error}>{errors.image?.message}</p> */}
+            <FileInput label="Image" className={styles.input} accept={IMAGE_FILE_TYPES.join(', ')} {...register('image', { validate: validateImage })} />
+            <p className={styles.error}>{errors.image?.message}</p>
           </div>
           <div className={styles.btns}>
             <Button type="submit" text={buttonText} className={styles.button} />
