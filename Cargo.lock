@@ -1193,6 +1193,54 @@ dependencies = [
 ]
 
 [[package]]
+name = "demo-nft"
+version = "1.1.0"
+dependencies = [
+ "demo-nft-io",
+ "gclient",
+ "gear-lib-derive",
+ "gear-lib-old",
+ "gear-wasm-builder",
+ "gmeta",
+ "gstd",
+ "gtest",
+ "hex-literal",
+ "primitive-types",
+ "sp-core 22.0.0",
+ "sp-core-hashing 10.0.0",
+ "tokio",
+]
+
+[[package]]
+name = "demo-nft-io"
+version = "1.1.0"
+dependencies = [
+ "gear-lib-old",
+ "gmeta",
+ "gstd",
+ "primitive-types",
+]
+
+[[package]]
+name = "demo-token"
+version = "1.1.0"
+dependencies = [
+ "demo-token-io",
+ "gear-wasm-builder",
+ "gmeta",
+ "gstd",
+ "gtest",
+]
+
+[[package]]
+name = "demo-token-io"
+version = "1.1.0"
+dependencies = [
+ "gmeta",
+ "gstd",
+]
+
+[[package]]
 name = "der"
 version = "0.7.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1319,47 +1367,6 @@ name = "dyn-clone"
 version = "1.0.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0d6ef0072f8a535281e4876be788938b528e9a1d43900b82c2569af7da799125"
-
-[[package]]
-name = "dynamic-nft"
-version = "1.1.0"
-dependencies = [
- "dynamic-nft-io",
- "fungible-token-io",
- "gclient",
- "gear-lib-derive",
- "gear-lib-old",
- "gear-wasm-builder",
- "gmeta",
- "gstd",
- "gtest",
- "hex-literal",
- "primitive-types",
- "sp-core 22.0.0",
- "sp-core-hashing 10.0.0",
- "tokio",
-]
-
-[[package]]
-name = "dynamic-nft-io"
-version = "1.1.0"
-dependencies = [
- "gear-lib-old",
- "gmeta",
- "gstd",
- "primitive-types",
-]
-
-[[package]]
-name = "dynamic-nft-state"
-version = "1.1.0"
-dependencies = [
- "dynamic-nft-io",
- "gear-lib-old",
- "gear-wasm-builder",
- "gmeta",
- "gstd",
-]
 
 [[package]]
 name = "dynasm"
@@ -1802,35 +1809,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "88a41f105fe1d5b6b34b2055e3dc59bb79b46b48b2040b9e6c7b4b5de097aa41"
 dependencies = [
  "autocfg",
-]
-
-[[package]]
-name = "fungible-token"
-version = "1.1.0"
-dependencies = [
- "fungible-token-io",
- "gear-wasm-builder",
- "gmeta",
- "gstd",
- "gtest",
-]
-
-[[package]]
-name = "fungible-token-io"
-version = "1.1.0"
-dependencies = [
- "gmeta",
- "gstd",
-]
-
-[[package]]
-name = "fungible-token-state"
-version = "1.1.0"
-dependencies = [
- "fungible-token-io",
- "gear-wasm-builder",
- "gmeta",
- "gstd",
 ]
 
 [[package]]

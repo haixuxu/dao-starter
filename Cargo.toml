@@ -3,10 +3,6 @@ resolver = "2"
 # Keep in the lexicographic order!
 # Remove a member if it's used as a dependency in the workspace.
 members = [
-    "contracts/fungible-token",
-    "contracts/fungible-token/state",
-    "contracts/dynamic-nft",
-    "contracts/dynamic-nft/state",
     "contracts/nft-marketplace",
     "contracts/nft-marketplace/state",
     "contracts/non-fungible-token",
@@ -14,6 +10,8 @@ members = [
     "contracts/sharded-fungible-token",
     "contracts/sharded-fungible-token/logic",
     "contracts/sharded-fungible-token/storage",
+    "templates/demo-nft",
+    "templates/demo-token",
 ]
 
 [workspace.package]
@@ -48,6 +46,13 @@ sharded-fungible-token-storage-io.path = "contracts/sharded-fungible-token/stora
 gear-lib.path = "contracts/gear-lib"
 gear-lib-old.path = "contracts/gear-lib-old"
 gear-lib-derive.path = "contracts/gear-lib-old/derive"
+
+
+demo-token-io.path = "templates/demo-token/io"
+demo-token-state.path = "templates/demo-token/state"
+
+demo-nft-io.path = "templates/demo-nft/io"
+demo-nft-state.path = "templates/demo-nft/state"
 
 # Gear
 
